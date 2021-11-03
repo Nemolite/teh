@@ -1,0 +1,11 @@
+/*
+Theme Name:     Teh
+Theme URI:      https://github.com/Nemolite/teh
+Description:    Дочерняя тема для темы morenews 
+Author:         Nemolite (Sergey Vushnyakov)
+Author URI:     http://vandraren.ru/
+Template:       morenews
+Version:        1.0.1
+*/
+
+@import url("../morenews/style.css");
