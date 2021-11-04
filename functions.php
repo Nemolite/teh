@@ -36,4 +36,9 @@ add_action( 'wp_enqueue_scripts', 'teh_scripts_style' );
  * Банеры
  */
 require_once( get_stylesheet_directory(). '/inc/baners.php' );
+
+/**
+ * Банеры (как на старом сайте)
+ */
+require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
 ?>
