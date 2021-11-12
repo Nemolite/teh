@@ -41,4 +41,10 @@ require_once( get_stylesheet_directory(). '/inc/baners.php' );
  * Банеры (как на старом сайте)
  */
 require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
+
+/**
+* Возврат раздела виджетов в классический вид
+*/
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false' );
 ?>
