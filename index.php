@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-
+    <?php  do_action( 'teh_front_page_block_document' ); ?>
     <div class="section-block-upper">
 
         <div id="primary" class="content-area">

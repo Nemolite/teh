@@ -53,4 +53,9 @@ require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
  */
 require_once( get_stylesheet_directory(). '/inc/front-baner.php' );
 
+/**
+ * Блок документов на главной
+ */
+require_once( get_stylesheet_directory(). '/inc/document.php' );
+
 ?>
