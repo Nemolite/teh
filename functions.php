@@ -47,4 +47,36 @@ require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
 */
 add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
+
+/**
+ * Блок документов
+ */
+
+if (!function_exists('teh_front_page_block_document_html')) :
+    /**
+     *
+     * @param null
+     * @return null
+     *
+     * @since teh 1.0.0
+     *
+     */
+    function teh_front_page_block_document_html()
+    {      
+    ?>
+
+        <section class="section-block-upper">
+        
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                          
+                </main>
+            </div>         
+
+        </section>
+
+        <?php
+    }
+endif;
+add_action('teh_front_page_block_document', 'teh_front_page_block_document_html', 50);
 ?>

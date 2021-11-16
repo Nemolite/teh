@@ -19,7 +19,7 @@ get_header(); ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 <!--<div class="af-container-row">-->
-111
+                <?php  do_action( 'teh_front_page_block_document' ); ?>
 				<?php
 				if ( have_posts() ) :
 
