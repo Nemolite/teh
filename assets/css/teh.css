@@ -52,4 +52,18 @@
   }
 }
 
+/* Блок для документов на главной*/
+
+.teh-section-block-top-baner {
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.teh-section-bottom-baner {
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
+}
+
 /*footer*/

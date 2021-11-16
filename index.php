@@ -19,7 +19,7 @@ get_header(); ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 <!--<div class="af-container-row">-->
-                <?php  do_action( 'teh_front_page_block_document' ); ?>
+                <?php  do_action( 'teh_front_page_block_top_baner' ); ?>
 				<?php
 				if ( have_posts() ) :
 
@@ -82,6 +82,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <!--</div>-->
+                <?php  do_action( 'teh_front_page_block_bottom_baner' ); ?>
             </main><!-- #main -->
 
         </div><!-- #primary -->

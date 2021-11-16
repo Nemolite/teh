@@ -33,6 +33,12 @@ function teh_scripts_style() {
 add_action( 'wp_enqueue_scripts', 'teh_scripts_style' );
 
 /**
+* Возврат раздела виджетов в классический вид
+*/
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false' );
+
+/**
  * Банеры
  */
 require_once( get_stylesheet_directory(). '/inc/baners.php' );
@@ -43,40 +49,8 @@ require_once( get_stylesheet_directory(). '/inc/baners.php' );
 require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
 
 /**
-* Возврат раздела виджетов в классический вид
-*/
-add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
-add_filter( 'use_widgets_block_editor', '__return_false' );
-
-/**
- * Блок документов
+ * Блок верхних и нижних банеров
  */
+require_once( get_stylesheet_directory(). '/inc/front-baner.php' );
 
-if (!function_exists('teh_front_page_block_document_html')) :
-    /**
-     *
-     * @param null
-     * @return null
-     *
-     * @since teh 1.0.0
-     *
-     */
-    function teh_front_page_block_document_html()
-    {      
-    ?>
-
-        <section class="section-block-upper">
-        
-            <div id="primary" class="content-area">
-                <main id="main" class="site-main">
-                          
-                </main>
-            </div>         
-
-        </section>
-
-        <?php
-    }
-endif;
-add_action('teh_front_page_block_document', 'teh_front_page_block_document_html', 50);
 ?>
