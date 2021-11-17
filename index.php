@@ -20,6 +20,11 @@ get_header(); ?>
             <main id="main" class="site-main">
                 <!--<div class="af-container-row">-->
                 <?php  do_action( 'teh_front_page_block_top_baner' ); ?>
+                <h2 class="widget-title widget-title-1" id="fix-news">
+                    <span class="heading-line-before"></span>
+                    <span class="heading-line">Новости</span>
+                    <span class="heading-line-after"></span>
+                </h2>  
 				<?php
 				if ( have_posts() ) :
 

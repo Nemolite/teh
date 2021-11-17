@@ -39,6 +39,35 @@ add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /**
+ * Регистрация виджетов для документов меню
+ */
+function teh_register_widgets_doc_left(){
+	register_sidebar( array(		
+		'name' => esc_html__('Левый информационный блок', 'teh'),
+		'id' => 'docleft',		
+		'description' => esc_html__('Для левого информационного блока', 'teh'),
+		'before_widget' => '<div id="%1$s" class="widget morenews-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title widget-title-1"><span class="heading-line-before"></span><span class="heading-line">',
+        'after_title' => '</span><span class="heading-line-after"></span></h2>',
+	) );
+}
+add_action( 'widgets_init', 'teh_register_widgets_doc_left' );
+
+function teh_register_widgets_doc_right(){
+	register_sidebar( array(		
+		'name' => esc_html__('Правый информационный блок', 'teh'),
+		'id' => 'docright',	
+		'description' => esc_html__('Для правого информационного меню', 'teh'),
+		'before_widget' => '<div id="%1$s" class="widget morenews-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title widget-title-1"><span class="heading-line-before"></span><span class="heading-line">',
+        'after_title' => '</span><span class="heading-line-after"></span></h2>',
+	) );
+}
+add_action( 'widgets_init', 'teh_register_widgets_doc_right' );
+
+/**
  * Банеры
  */
 require_once( get_stylesheet_directory(). '/inc/baners.php' );

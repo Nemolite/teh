@@ -56,20 +56,62 @@
 
 .teh-section-block-top-baner {
   width: 100%;
-  height: 300px;
-  border: 1px solid red;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.doc-bottom-empty {
+  width: 100%;
+  height: 15px;
+  background-color: #eeeeee;
+}
+
+.teh-top-document-left {
+  width: 48.8%;
+  height: auto;
+  float: left;
+}
+
+.teh-top-document-right {
+  width: 48.8%;
+  height: auto;
+  float: left;
+  margin-left: 15px;
+}
+
+.teh-section-block-document {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 35px;
+}
+
+#fix-news {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .teh-section-bottom-baner {
   width: 100%;
   height: 300px;
   border: 1px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.teh-section-block-document {
-  width: 100%;
-  height: 150px;
-  margin-bottom: 20px;
+.bottom-baner-left {
+  width: 48.7%;
+  height: 300px;
+  border: 1px solid green;
+  float: left;
+}
+
+.bottom-baner-right {
+  width: 48.7%;
+  height: 300px;
+  border: 1px solid green;
+  float: left;
+  margin-left: 16px;
 }
 
 /*footer*/
