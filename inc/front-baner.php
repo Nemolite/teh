@@ -52,12 +52,30 @@ if (!function_exists('teh_front_page_block_bottom_baner_html')) :
     {      
     ?>
         <section class="teh-section-bottom-baner">
-            <div class="bottom-baner-left">
-
-            </div> 
-            <div class="bottom-baner-right">
-                
-            </div>         
+             <div class="bottom-baner__item">
+            <img src="http://teh.local/wp-content/uploads/2021/11/1.png" alt="">
+             </div>
+             <div class="bottom-baner__item">
+             <img src="http://teh.local/wp-content/uploads/2021/11/2.png" alt="">                
+             </div> 
+             <div class="bottom-baner__item">
+            <img src="http://teh.local/wp-content/uploads/2021/11/3.png" alt="">
+             </div>
+             <div class="bottom-baner__item">
+             <img src="http://teh.local/wp-content/uploads/2021/11/4.png" alt="">                
+             </div> 
+             <div class="bottom-baner__item">
+            <img src="http://teh.local/wp-content/uploads/2021/11/5.png" alt="">
+             </div>
+             <div class="bottom-baner__item">
+             <img src="http://teh.local/wp-content/uploads/2021/11/1.png" alt="">                
+             </div> 
+             <div class="bottom-baner__item">
+            <img src="http://teh.local/wp-content/uploads/2021/11/2.png" alt="">
+             </div>
+             <div class="bottom-baner__item">
+             <img src="http://teh.local/wp-content/uploads/2021/11/3.png" alt="">                
+             </div>      
                  
         </section>
 
