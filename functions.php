@@ -120,6 +120,8 @@ function teh_add_custom_url(){
 add_action('add_meta_boxes', 'teh_add_custom_url');
 
 function teh_meta_box_callback($post){
+
+	wp_nonce_field( plugin_basename(__FILE__), 'mynoncename' );
 	
 	$value = get_post_meta( $post->ID, 'teh_meta_url', 1 );
 	
@@ -129,7 +131,19 @@ function teh_meta_box_callback($post){
 
 function teh_save_data_url( $post_id ) {	
 	
-	$url = $_POST['teh_meta_url'];
+	if ( ! isset( $_POST['teh_meta_url'] ) )
+		return;
+	
+	if ( ! wp_verify_nonce( $_POST['mynoncename'], plugin_basename(__FILE__) ) )
+		return;
+	
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
+		return;
+	
+	if( ! current_user_can( 'edit_post', $post_id ) )
+		return;
+	
+	$url = sanitize_text_field($_POST['teh_meta_url']);
 	
 	update_post_meta( $post_id, 'teh_meta_url', $url );
 }

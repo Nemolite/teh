@@ -71,8 +71,7 @@ if (!function_exists('teh_front_page_block_bottom_baner_html')) :
                                                                    
             ?>
             <?php 
-            $url = get_post_meta(get_the_ID(), 'teh_meta_url', true);
-            echo $url;
+            $url = get_post_meta(get_the_ID(), 'teh_meta_url', true);         
             if (''!=$url) {
                 $link = $url;
             } else {
