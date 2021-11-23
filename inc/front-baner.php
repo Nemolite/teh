@@ -52,30 +52,46 @@ if (!function_exists('teh_front_page_block_bottom_baner_html')) :
     {      
     ?>
         <section class="teh-section-bottom-baner">
-             <div class="bottom-baner__item">
-            <img src="http://teh.local/wp-content/uploads/2021/11/1.png" alt="">
-             </div>
-             <div class="bottom-baner__item">
-             <img src="http://teh.local/wp-content/uploads/2021/11/2.png" alt="">                
-             </div> 
-             <div class="bottom-baner__item">
-            <img src="http://teh.local/wp-content/uploads/2021/11/3.png" alt="">
-             </div>
-             <div class="bottom-baner__item">
-             <img src="http://teh.local/wp-content/uploads/2021/11/4.png" alt="">                
-             </div> 
-             <div class="bottom-baner__item">
-            <img src="http://teh.local/wp-content/uploads/2021/11/5.png" alt="">
-             </div>
-             <div class="bottom-baner__item">
-             <img src="http://teh.local/wp-content/uploads/2021/11/1.png" alt="">                
-             </div> 
-             <div class="bottom-baner__item">
-            <img src="http://teh.local/wp-content/uploads/2021/11/2.png" alt="">
-             </div>
-             <div class="bottom-baner__item">
-             <img src="http://teh.local/wp-content/uploads/2021/11/3.png" alt="">                
-             </div>      
+            <h2 class="widget-title widget-title-1">
+                <span class="heading-line-before"></span>
+                <span class="heading-line">Информация</span>
+                <span class="heading-line-after"></span>
+            </h2> 
+
+            <?php  
+                $args = array(
+                    'post_type' => 'bottom_baner',                                       
+                    'post_status' => 'publish', 
+                    'posts_per_page' => -1,                           
+                    );   
+                $query = new WP_Query($args);
+                if( $query->have_posts() ){
+                    while( $query->have_posts() ){            
+                        $query->the_post(); 
+                                                                   
+            ?>
+            <?php 
+            $url = get_post_meta(get_the_ID(), 'teh_meta_url', true);
+            echo $url;
+            if (''!=$url) {
+                $link = $url;
+            } else {
+               $link = get_permalink();
+            }
+             
+            ?>
+            <a href="<?php echo esc_url($link);?>" target="_blank">
+                <div class="bottom-baner__item">
+                <?php echo get_the_post_thumbnail();?>
+                </div>
+            </a>
+
+            <?php
+                  }       
+                }
+                wp_reset_postdata();
+            ?>
+                  
                  
         </section>
 
