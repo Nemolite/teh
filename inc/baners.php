@@ -12,8 +12,8 @@ class banersWidget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'baner', 
-			'teh_банеры', // заголовок виджета
-			array( 'description' => 'Позволяет добавлять банер в сайтбар' ) // описание
+			'Банеры (вариант 2)', // заголовок виджета
+			array( 'description' => 'Добавляет в сайтбар банер, как изображение, текст и ссылка' ) // описание
 		);
 	}
  

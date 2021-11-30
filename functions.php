@@ -169,4 +169,9 @@ require_once( get_stylesheet_directory(). '/inc/front-baner.php' );
  */
 require_once( get_stylesheet_directory(). '/inc/document.php' );
 
+/**
+ * Блок Яндекс.Карта
+ */
+require_once( get_stylesheet_directory(). '/inc/yandexmap.php' );
+
 ?>

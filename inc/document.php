@@ -15,7 +15,7 @@ if (!function_exists('teh_front_page_block_document_html')) :
     {      
     ?>
         <section class="teh-section-block-document">       
-        <?php echo do_shortcode('[metaslider id="59"]'); ?>  <!-- 795 -->  
+        <?php echo do_shortcode('[metaslider id="795"]'); ?>  
         </section>
 
         <?php

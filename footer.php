@@ -34,6 +34,7 @@ if(!empty($morenews_footer_background)){
     $sidebar_col_class .= ' data-bg';
 }
 ?>
+<?php do_action('teh_yandex_map_upper_footer_section'); ?>
 </div>
 <?php do_action('morenews_action_full_width_upper_footer_section'); ?>
 

@@ -12,8 +12,8 @@ class banersOldWidget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'banerold', 
-			'teh_old_банеры', // заголовок виджета
-			array( 'description' => 'Позволяет добавлять банер в сайтбар(old)' ) // описание
+			'Банер(вариант 1)', // заголовок виджета
+			array( 'description' => 'Добавляет в сайтбар банер, как изображение и ссылка' ) // описание
 		);
 	}
  
@@ -23,7 +23,7 @@ class banersOldWidget extends WP_Widget {
 	public function widget( $args, $param ) {
 		?>
      <div class="teh-baners-sitebar">
-		 <a href="<?php echo esc_url($param['url']);?>">
+		 <a href="<?php echo esc_url($param['url']);?>" target="_blank">
 			 <img src="<?php echo esc_url($param['img']);?>" alt="">
 		 </a>
 	 </div>
@@ -47,7 +47,7 @@ class banersOldWidget extends WP_Widget {
 
        
         <p>
-			<label for="<?php echo $this->get_field_id( 'img' ); ?>">Ссылка на изображение 130x90 (url)</label> 
+			<label for="<?php echo $this->get_field_id( 'img' ); ?>">Ссылка на изображение (url)</label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'img' ); ?>" name="<?php echo $this->get_field_name( 'img' ); ?>" type="url" value="<?php echo esc_attr( $img ); ?>" />
 		</p>
 
