@@ -1,8 +1,8 @@
 <?php
 /**
- * Блок верхних банеров
+ * Блок документов на верху , над новостями
  */
-if (!function_exists('teh_front_page_block_top_baner_html')) :
+if (!function_exists('teh_front_page_block_top_document_html')) :
     /**
      *
      * @param null
@@ -11,13 +11,23 @@ if (!function_exists('teh_front_page_block_top_baner_html')) :
      * @since teh 1.0.0
      *
      */
-    function teh_front_page_block_top_baner_html()
+    function teh_front_page_block_top_document_html()
     {      
     ?>
-        <section class="teh-section-block-top-baner"> 
+	 <section class="teh-section-block-top-baner"> 
             <h2 class="widget-title widget-title-1">
                 <span class="heading-line-before"></span>
-                <span class="heading-line">Документы</span>
+                <span class="heading-line">Наш старый сайт</span>
+                <span class="heading-line-after"></span>
+            </h2>  
+        <a href="https://shpt.edusite.ru/p1aa1.html" target="blank">Ссылка на наш старый сайт</a>                      
+        </section>
+        <div class="doc-bottom-empty"></div>
+	
+        <section class="teh-section-top-document"> 
+            <h2 class="widget-title widget-title-1">
+                <span class="heading-line-before"></span>
+                <span class="heading-line">Деятельность</span>
                 <span class="heading-line-after"></span>
             </h2>  
             <div class="teh-top-document-left">
@@ -26,15 +36,17 @@ if (!function_exists('teh_front_page_block_top_baner_html')) :
             <div class="teh-top-document-right">
                 <?php dynamic_sidebar( 'docright' ); ?>   
             </div>                        
-        </section>
-        <div class="doc-bottom-empty">
-
-        </div>
+        </section>       
+        <div class="doc-bottom-empty"></div>
+            <div class="edu-work">
+            
+            </div>
+        <div class="doc-bottom-empty"></div>
 
         <?php
     }
 endif;
-add_action('teh_front_page_block_top_baner', 'teh_front_page_block_top_baner_html', 50);
+add_action('teh_front_page_block_top_document', 'teh_front_page_block_top_document_html', 50);
 
 /**
  * Блок нижних банеров

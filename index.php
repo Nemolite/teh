@@ -13,13 +13,14 @@
  */
 
 get_header(); ?>
-    <?php  do_action( 'teh_front_page_block_document' ); ?>
+    <?php  do_action( 'teh_front_page_block_slider' ); ?>
     <div class="section-block-upper">
 
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 <!--<div class="af-container-row">-->
-                <?php  do_action( 'teh_front_page_block_top_baner' ); ?>
+                <?php  do_action( 'teh_front_page_block_top_document' ); ?>
+				
                 <h2 class="widget-title widget-title-1" id="fix-news">
                     <span class="heading-line-before"></span>
                     <span class="heading-line">Новости</span>

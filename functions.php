@@ -165,9 +165,9 @@ require_once( get_stylesheet_directory(). '/inc/baners_old.php' );
 require_once( get_stylesheet_directory(). '/inc/front-baner.php' );
 
 /**
- * Блок документов на главной
+ * Блок слайдера (на всю ширину)
  */
-require_once( get_stylesheet_directory(). '/inc/document.php' );
+require_once( get_stylesheet_directory(). '/inc/slider.php' );
 
 /**
  * Блок Яндекс.Карта
