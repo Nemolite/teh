@@ -38,9 +38,10 @@ if (!function_exists('teh_front_page_block_top_document_html')) :
             </div>                        
         </section>       
         <div class="doc-bottom-empty"></div>
-            <div class="edu-work">
-            
+            <a href="http://shumpoliteh.ru/?page_id=733">
+            <div class="edu-work">              
             </div>
+            </a>     
         <div class="doc-bottom-empty"></div>
 
         <?php

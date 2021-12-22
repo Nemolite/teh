@@ -174,4 +174,9 @@ require_once( get_stylesheet_directory(). '/inc/slider.php' );
  */
 require_once( get_stylesheet_directory(). '/inc/yandexmap.php' );
 
+/**
+ * СНО, Новости СНО
+ */
+require_once( get_stylesheet_directory(). '/inc/sno.php' );
+
 ?>
